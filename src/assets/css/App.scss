@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import "Config";
+
+// --------- CONFIG -----------
+
+.font-title {
+    font-family: "Quicksand", sans-serif;
+}
+
+.font-content {
+    font-family: "Raleway", sans-serif;
+}
+
+.color-primary {
+    color: $color_primary_normal;
+}
+
+// --------- BUTTONS -----------
+
+.btn {
+    border: none;
+    box-shadow: none;
+    background: none;
+    padding: 0.75em 1.25em;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+
+    .fas {
+        margin-left: 0.25em;
+    }
+}
+
+.btn-primary {
+    background-color: $color_primary_normal;
+    color: white;
+
+    transition: background-color 0.25s ease-out;
+
+    &:hover {
+        background-color: $color_primary_dark;
+    }
+}
+
+.btn-primary-inv {
+    background-color: transparent;
+    color: $color_primary_normal;
+
+    transition: background-color 0.25s ease-out;
+
+    &:hover {
+        background-color: $color_primary_normal;
+        color: white;
+    }
+}
