@@ -114,7 +114,6 @@ article.estate {
         align-items: center;
         justify-content: flex-end;
         height: inherit;
-        widows: inherit;
         padding: 0 calc(5px + 0.5em);
         white-space: nowrap;
         overflow: hidden;
