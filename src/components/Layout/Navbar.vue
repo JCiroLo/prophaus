@@ -1,5 +1,5 @@
 <template>
-  <div class="blur-background" :class="{ show }">
+  <header :class="{ show }">
     <nav>
       <a class="brand" href="/">
         <img
@@ -31,7 +31,7 @@
         <router-link class="font-content" to="/about"> Contacto</router-link>
       </div>
     </aside>
-  </div>
+  </header>
 </template>
 
 <script>
@@ -51,7 +51,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.blur-background {
+header {
   position: fixed;
   top: 0;
   left: 0;

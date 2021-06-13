@@ -53,3 +53,14 @@
         color: white;
     }
 }
+
+.btn-secondary {
+    background-color: $color_secondary_normal;
+    color: $color_text_dark;
+
+    transition: background-color 0.25s ease-out;
+
+    &:hover {
+        background-color: $color_secondary_dark;
+    }
+}

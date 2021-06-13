@@ -27,6 +27,20 @@
         Conoce mas sobre nosotros <span class="fas fa-arrow-right" />
       </button>
     </div>
+    <div class="estates">
+      <Estate
+        v-for="(estate, idx) of estates"
+        :key="idx"
+        :img="estate.thumb"
+        :title="estate.title"
+        :description="estate.description"
+        :required="estate.required"
+        :collected="estate.collected"
+        :estimated_date="estate.estimated_date"
+        :minimum_amount="estate.minimum_amount"
+      />
+      <button class="btn btn-primary-inv font-title">Ver mas proyectos <span class="fas fa-arrow-right" /></button>
+    </div>
     <div class="features">
       <div class="section-title">
         <small class="font-title">Explora</small>
@@ -166,7 +180,39 @@
 </template>
 
 <script>
-export default {};
+import Estate from "../Layout/Estate.vue";
+export default {
+  name: "Home",
+  components: {
+    Estate,
+  },
+  data() {
+    return {
+      estates: [
+        {
+          thumb:
+            "https://esquema.esquema.com.co/prophaus/wp-content/uploads/2021/06/modern-house-entrance-with-garden-and-wooden-deck-PXUADMN-scaled-1-1536x1037.jpg",
+          title: "Memory Vault for pictures",
+          description: "Lorem ipsum dolor",
+          required: 200000000,
+          collected: 40000000,
+          minimum_amount: 2000000,
+          estimated_date: "24 meses",
+        },
+        {
+          thumb:
+            "https://esquema.esquema.com.co/prophaus/wp-content/uploads/2021/06/space-of-a-modern-house-P9C8JAJ-scaled-1-1536x1024.jpg",
+          title: "Croatia Holidays market",
+          description: "Cualquier cosa",
+          required: 400000000,
+          collected: 400000000,
+          minimum_amount: 4000000,
+          estimated_date: "16 meses",
+        },
+      ],
+    };
+  },
+};
 </script>
 
 <style lang="scss" scoped>
@@ -190,7 +236,7 @@ export default {};
   .greeting {
     display: flex;
     justify-content: center;
-		margin: 0 -75px;
+    margin: 0 -75px;
     margin-top: $nav_height;
     height: calc(100vh - #{$nav_height});
 
@@ -228,6 +274,12 @@ export default {};
       font-size: 1.5em;
       font-weight: 600;
     }
+  }
+
+  .estates {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    column-gap: 25px;
   }
 
   .features {
